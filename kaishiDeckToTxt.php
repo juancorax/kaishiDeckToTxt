@@ -13,10 +13,10 @@ if (! shell_exec('which zstd')) {
 $apkgFile = 'Kaishi.1.5k.apkg';
 
 if (! file_exists($apkgFile)) {
-    exit("Error: 'Kaishi.1.5k.apkg' not found in this directory".PHP_EOL);
+    exit("Error: '$apkgFile' not found in this directory".PHP_EOL);
 }
 
-echo "'Kaishi.1.5k.apkg' found!".PHP_EOL;
+echo "'$apkgFile' found!".PHP_EOL;
 
 $zip = new ZipArchive;
 $apkgFileOpened = $zip->open($apkgFile);
